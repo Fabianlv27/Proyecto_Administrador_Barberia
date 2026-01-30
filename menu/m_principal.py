@@ -7,4 +7,5 @@ def menu_principal():
         {"descripcion": "(¿Tienes cuenta?) Iniciar sesión", "funcion": menu_login},
         {"descripcion": "(¿Eres nuevo?) Registarse", "funcion": menu_registro},
         {"descripcion": "Salir", "funcion": None}]
+    
     menu_plantilla(opciones, "Menú Principal")

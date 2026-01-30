@@ -1,5 +1,5 @@
 import re
-
+from funciones.general.crud_generico import JsonBasicCRUD
 
 def validar_datos(correo, contraseña):
     if not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", correo):
@@ -21,7 +21,8 @@ def menu_login():
         correo, contraseña = pedir_datos_login()
         es_valido, mensaje_error = validar_datos(correo, contraseña)
         if es_valido:
-            print("Inicio de sesión exitoso.")
+            JsonBasicCRUD("Data/sesion.json").create("sesion_actual", {"correo": correo, "contraseña": contraseña})
+            print("Inicio de sesión exitoso.")          
             exito=True
             # Aquí iría la lógica para verificar las credenciales contra la base de datos
             break
