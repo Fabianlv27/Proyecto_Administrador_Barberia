@@ -1,5 +1,8 @@
 #Solo para Usuarios Nuevos , los empleados los mete el admin local o general
 import re
+import uuid
+
+from funciones.general.crud_generico import JsonBasicCRUD
 
 def validar_datos(nombre, apellido, numero, correo, contraseña):
     # Nombre
@@ -68,6 +71,20 @@ def menu_registro():
             datos["contraseña"]
         )
         if es_valido:
+            user_id = str(uuid.uuid4())
+            JsonBasicCRUD("Data/index_correo.json").create(resultado["correo"], {"contraseña": resultado["contraseña"],"user_id": user_id})
+            JsonBasicCRUD("Data/clientes.json").create(user_id, {
+                "nombre": resultado["nombre"],
+                "apellido": resultado["apellido"],
+                "numero": resultado["numero"],
+                "correo": resultado["correo"],
+                "contraseña": resultado["contraseña"],
+                "n_citas": 0,
+                "total_gasto": 0,
+                "citas": [],
+                "local_favorito": None,
+                "barbero_favorito": None
+            })
             print("Registro exitoso. Datos validados:")
             for clave, valor in resultado.items():
                 print(f"{clave.capitalize()}: {valor}")
