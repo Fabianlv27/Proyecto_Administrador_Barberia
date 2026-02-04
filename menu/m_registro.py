@@ -73,7 +73,7 @@ def menu_registro():
         if es_valido:
             user_id = str(uuid.uuid4())
             JsonBasicCRUD("Data/index_correo.json").create(resultado["correo"], {"contraseña": resultado["contraseña"],"user_id": user_id})
-            JsonBasicCRUD("Data/clientes.json").create(user_id, {
+            JsonBasicCRUD("Data/usuarios.json").create(user_id, {
                 "nombre": resultado["nombre"],
                 "apellido": resultado["apellido"],
                 "numero": resultado["numero"],

@@ -1,5 +1,6 @@
 import re
 from funciones.general.crud_generico import JsonBasicCRUD
+from funciones.sesion.sesion import set_sesion,set_new_sesion
 
 def validar_datos(correo, contraseña):
     if not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", correo):
@@ -22,6 +23,10 @@ def pedir_datos_login():
     contraseña = input("Contraseña: ")
     return correo, contraseña
 
+def set_complete_sesion(user_id):
+    user_data = JsonBasicCRUD("Data/usuarios.json").read(user_id)
+    set_new_sesion(user_data)
+
 def menu_login():
     exito=False
     while True:
@@ -33,7 +38,9 @@ def menu_login():
             if not is_valid:
                 print(message)
                 continue
+            
             JsonBasicCRUD("Data/sesion.json").create("sesion_actual", {"correo": correo, "contraseña": contraseña, "user_id": user_id})
+            set_complete_sesion(user_id)
             print("Inicio de sesión exitoso.")          
             exito=True
             break

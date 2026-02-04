@@ -1,2 +1,3 @@
+from menu.m_principal import menu_principal
 if __name__ == "__main__":
-    print("Hello, World!")
+    menu_principal()
