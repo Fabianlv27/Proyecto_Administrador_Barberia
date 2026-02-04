@@ -36,7 +36,6 @@ def menu_login():
             JsonBasicCRUD("Data/sesion.json").create("sesion_actual", {"correo": correo, "contraseña": contraseña, "user_id": user_id})
             print("Inicio de sesión exitoso.")          
             exito=True
-            # Aquí iría la lógica para verificar las credenciales contra la base de datos
             break
         else:
             print(f"Error en el inicio de sesión: {mensaje_error}")
