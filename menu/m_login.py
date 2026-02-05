@@ -47,5 +47,4 @@ def menu_login():
         else:
             print(f"Error en el inicio de sesión: {mensaje_error}")
     if exito:
-        #TO-DO: Llamar al menú principal de usuario
         return True

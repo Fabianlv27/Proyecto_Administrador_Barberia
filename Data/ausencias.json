@@ -43,5 +43,14 @@
         "fecha_fin": "2025-02-26",
         "aprobada": true,
         "comentario": "Curso intensivo de nuevas técnicas de degradado."
+    },
+    "ba0c2258-4886-4850-b5c8-7adc4b31dae2": {
+        "id_ausencia": "ba0c2258-4886-4850-b5c8-7adc4b31dae2",
+        "id_empleado": "95088210-9988-4682-965a-0635489f6645",
+        "tipo": "Enfermedad",
+        "fecha_inicio": "2026-02-05",
+        "fecha_fin": "2026-02-07",
+        "aprobada": false,
+        "comentario": "Me duele la cabeza"
     }
 }

@@ -17,9 +17,16 @@ def set_sesion():
     persona_object = JsonBasicCRUD("Data/usuarios.json").read(sesion_data.get("user_id"))
     if persona_object is not None:
         persona = persona_object
+        persona["user_id"] = sesion_data.get("user_id")  
         print(f"Sesión cargada para {persona.get('nombre')}")
     else:
         persona = None
+
+def cerrar_sesion():
+    global persona
+    persona = None
+    JsonBasicCRUD("Data/sesion.json").delete("sesion_actual")
+    print("Sesión cerrada.")
 
 def get_sesion():
     global persona

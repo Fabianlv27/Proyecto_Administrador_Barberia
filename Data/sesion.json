@@ -14,6 +14,7 @@
         ],
         "DNI": "00000000A",
         "estado": "Trabajando",
+        "local": "BBB22",
         "sueldo": 6000,
         "Ciudad": "Madrid",
         "Provincia": "Madrid",

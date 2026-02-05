@@ -85,9 +85,9 @@ def menu_registro():
             
             for clave, valor in resultado.items():
                 print(f"{clave.capitalize()}: {valor}")
-            break
+            return True
         else:
             print(f"Error de validación: {resultado}")
         repetir = input("¿Desea intentar registrarse de nuevo? (s/n): ").strip().lower()
         if repetir != 's':
-            break
+            return False

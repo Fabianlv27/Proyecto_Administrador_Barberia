@@ -7,21 +7,36 @@ from menu.m_admin_local import menu_admin_local
 from menu.m_cliente import menu_cliente
 from menu.m_admin_general import menu_admin_general
 from menu.m_empleados import menu_empleados
-
+from funciones.sesion.sesion import cerrar_sesion
 persona =None
+log_out = False
 
 role_functions = {"empleado":menu_empleados,"admin_local":menu_admin_local,"admin_general":menu_admin_general,"cliente":menu_cliente,
                   "barbero":menu_barbero}
 
+def accion_login():
+    global log_out
+    log_out=not menu_login()
+    
+def accion_registro():
+    global log_out
+    log_out=not menu_registro()
+
+def accion_logout():
+    global log_out
+    cerrar_sesion()
+    log_out = True
 
 def menu_no_login():
     opciones = [
-        {"descripcion": "(¿Tienes cuenta?) Iniciar sesión", "funcion": menu_login},
-        {"descripcion": "(¿Eres nuevo?) Registarse", "funcion": menu_registro},
+        {"descripcion": "(¿Tienes cuenta?) Iniciar sesión", "funcion":accion_login},
+        {"descripcion": "(¿Eres nuevo?) Registarse", "funcion": accion_registro},
         {"descripcion": "Salir", "funcion": None}]
     
     menu_plantilla(opciones, "Menú Principal")
-    return 
+    if not log_out:
+        return menu_with_login()
+    return
 
 def manejo_roles(roles):
     new_options = []
@@ -29,14 +44,17 @@ def manejo_roles(roles):
         new_options.append({"descripcion":"Menu "+rol,"funcion":role_functions.get(rol)})
     return new_options
 
+
 def menu_with_login():
     while True:
         opciones = manejo_roles(persona.get("rol", []))
         print(persona)
-        opciones.extend([{"descripcion": "(<-) Cerrar sesión",  "funcion": None},{"descripcion": "Salir", "funcion":     None}])  
+        opciones.extend([{"descripcion": "(<-) Cerrar sesión",  "funcion":accion_logout},{"descripcion": "Salir", "funcion":     None}])  
         continuar= menu_plantilla(opciones, "Menú Principal")
         if not continuar:
             return
+        if log_out:
+            return menu_no_login()
 
 def menu_principal():
     global persona
