@@ -18,6 +18,12 @@ def menu_plantilla(opciones:list,titulo):
             eleccion = input("Seleccione una opción (1-{}): ".format(len(opciones)))
         else:
             break
-    opciones[int(eleccion) - 1]['funcion']()
+    funcion=opciones[int(eleccion) - 1]['funcion']
+    if funcion is not None:
+        funcion()
+        return True
+    else:
+        return False
+    
 
    

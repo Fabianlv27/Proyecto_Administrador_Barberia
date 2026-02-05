@@ -3,6 +3,8 @@ import re
 import uuid
 
 from funciones.general.crud_generico import JsonBasicCRUD
+from funciones.sesion.hash_manager import HashManager
+from models.schemas import Cliente
 
 def validar_datos(nombre, apellido, numero, correo, contraseña):
     # Nombre
@@ -72,20 +74,15 @@ def menu_registro():
         )
         if es_valido:
             user_id = str(uuid.uuid4())
-            JsonBasicCRUD("Data/index_correo.json").create(resultado["correo"], {"contraseña": resultado["contraseña"],"user_id": user_id})
-            JsonBasicCRUD("Data/usuarios.json").create(user_id, {
-                "nombre": resultado["nombre"],
-                "apellido": resultado["apellido"],
-                "numero": resultado["numero"],
-                "correo": resultado["correo"],
-                "contraseña": resultado["contraseña"],
-                "n_citas": 0,
-                "total_gasto": 0,
-                "citas": [],
-                "local_favorito": None,
-                "barbero_favorito": None
-            })
+            contraseña_hasheada =HashManager.crearhash(resultado["contraseña"] )  
+            
+            JsonBasicCRUD("Data/index_correo.json").create(resultado["correo"], {"contraseña": contraseña_hasheada,"user_id": user_id})
+            
+            
+            JsonBasicCRUD("Data/usuarios.json").create(user_id,Cliente(id=user_id, nombre=resultado["nombre"], apellido=resultado["apellido"], numero=resultado["numero"], correo=resultado["correo"], contraseña=contraseña_hasheada, rol=["cliente"]).dict())
+            
             print("Registro exitoso. Datos validados:")
+            
             for clave, valor in resultado.items():
                 print(f"{clave.capitalize()}: {valor}")
             break

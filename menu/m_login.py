@@ -1,5 +1,6 @@
 import re
 from funciones.general.crud_generico import JsonBasicCRUD
+from funciones.sesion.hash_manager import HashManager
 from funciones.sesion.sesion import set_sesion,set_new_sesion
 
 def validar_datos(correo, contraseña):
@@ -13,7 +14,7 @@ def password_validator(correo, contraseña):
     user_data = JsonBasicCRUD("Data/index_correo.json").read(correo)
     if user_data is None:
         return False, "Correo no encontrado"
-    if user_data.get("contraseña") != contraseña:
+    if not HashManager.verificar_hash(contraseña, user_data.get("contraseña")):
         return False, "Contraseña incorrecta"
     return True,user_data.get("user_id"), "Contraseña válida"
 
@@ -37,8 +38,7 @@ def menu_login():
             is_valid, user_id, message = password_validator(correo, contraseña)
             if not is_valid:
                 print(message)
-                continue
-            
+                continue          
             JsonBasicCRUD("Data/sesion.json").create("sesion_actual", {"correo": correo, "contraseña": contraseña, "user_id": user_id})
             set_complete_sesion(user_id)
             print("Inicio de sesión exitoso.")          

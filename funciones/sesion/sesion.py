@@ -11,6 +11,9 @@ def set_new_sesion(pers):
 def set_sesion():
     global persona
     sesion_data = JsonBasicCRUD("Data/sesion.json").read("sesion_actual")
+    if sesion_data is None:
+        print("No hay sesión activa.")
+        return None
     persona_object = JsonBasicCRUD("Data/usuarios.json").read(sesion_data.get("user_id"))
     if persona_object is not None:
         persona = persona_object

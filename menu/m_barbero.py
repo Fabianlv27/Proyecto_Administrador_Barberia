@@ -8,13 +8,14 @@ def manejo_opciones():
     opciones = [{"descripcion": "Gestionar citas", "funcion": None},
                 {"descripcion": "Ver estadisticas", "funcion": None},
                 {"descripcion": "(<-) volver", "funcion": None},
-                ]
-    #Por si en un futuro se agregan más roles el admin general tambien puede ser empleado o admin local    
+                ] 
     return opciones
 
 def menu_barbero():
     global persona
-    persona=get_sesion()
-    print(f"Bienvenido al menú Barbero, {persona.get('nombre')}!")
-    menu_plantilla(manejo_opciones(), "Menú Administrador Local")
-    return None
+    while True: 
+        persona=get_sesion()
+        print(f"Bienvenido al menú Barbero, {persona.get('nombre')}!")
+        continuar=menu_plantilla(manejo_opciones(), "Menú Administrador Local")
+        if not continuar:
+            return

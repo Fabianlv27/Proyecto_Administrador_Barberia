@@ -1,4 +1,5 @@
 from funciones.sesion.sesion import get_sesion,set_sesion
+from menu.m_barbero import menu_barbero
 from menu.m_plantilla import menu_plantilla
 from menu.m_login import menu_login
 from menu.m_registro import menu_registro
@@ -9,7 +10,8 @@ from menu.m_empleados import menu_empleados
 
 persona =None
 
-role_functions = {"empleado":menu_empleados,"admin_local":menu_admin_local,"admin_general":menu_admin_general,"cliente":menu_cliente}
+role_functions = {"empleado":menu_empleados,"admin_local":menu_admin_local,"admin_general":menu_admin_general,"cliente":menu_cliente,
+                  "barbero":menu_barbero}
 
 
 def menu_no_login():
@@ -19,14 +21,22 @@ def menu_no_login():
         {"descripcion": "Salir", "funcion": None}]
     
     menu_plantilla(opciones, "Menú Principal")
-    #big data,cloud ,IA,ciclo de vida de validacion ,prompt es una instruccion
-    return None
+    return 
+
+def manejo_roles(roles):
+    new_options = []
+    for rol in roles:
+        new_options.append({"descripcion":"Menu "+rol,"funcion":role_functions.get(rol)})
+    return new_options
 
 def menu_with_login():
-    print(persona)
-    rol = persona["rol"]
-    role_functions[rol[0]]()
-    return None
+    while True:
+        opciones = manejo_roles(persona.get("rol", []))
+        print(persona)
+        opciones.extend([{"descripcion": "(<-) Cerrar sesión",  "funcion": None},{"descripcion": "Salir", "funcion":     None}])  
+        continuar= menu_plantilla(opciones, "Menú Principal")
+        if not continuar:
+            return
 
 def menu_principal():
     global persona
