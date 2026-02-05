@@ -1,0 +1,82 @@
+{
+    "AAA33": {
+        "id_reseña": "AAA33",
+        "id_cita": "YU26",
+        "id_cliente": "d8e7c6b5-a4f3-4e2d-1c0b-9a8f7e6d5c4b",
+        "id_barbero": "1a2b3c4d-5e6f-4789-0abc-def012345678",
+        "puntuacion": 5,
+        "comentario": "Atención de diez.",
+        "fecha": "2025-01-21T16:30:00",
+        "visible": true
+    },
+    "EE455": {
+        "id_reseña": "EE455",
+        "id_cita": "L1",
+        "id_cliente": "6d7e8f9a-0b1c-4234-9abc-def012345678",
+        "id_barbero": "1a2b3c4d-5e6f-4789-0abc-def012345678",
+        "puntuacion": 5,
+        "comentario": "Trato inmejorable, volveré sin duda.",
+        "fecha": "2025-01-26T11:00:00",
+        "visible": true
+    },
+    "REV2276": {
+        "id_reseña": "REV2276",
+        "id_cita": "CC13",
+        "id_cliente": "a1b2c3d4-e5f6-4789-8765-43210fedcba9",
+        "id_barbero": "95088210-9988-4682-965a-0635489f6645",
+        "puntuacion": 5,
+        "comentario": "Muy satisfecho con el resultado.",
+        "fecha": "2025-01-09T06:30:00",
+        "visible": true
+    },
+    "REV3949": {
+        "id_reseña": "REV3949",
+        "id_cita": "K4",
+        "id_cliente": "2b3c4d5e-6f7a-4890-bcde-f0123456789a",
+        "id_barbero": "95088210-9988-4682-965a-0635489f6645",
+        "puntuacion": 4,
+        "comentario": "Me encanta cómo me dejó la barba.",
+        "fecha": "2025-01-09T05:30:00",
+        "visible": true
+    },
+    "REV2414": {
+        "id_reseña": "REV2414",
+        "id_cita": "U99",
+        "id_cliente": "5e6f7a8b-9c0d-4123-ef01-23456789abcd",
+        "id_barbero": "95088210-9988-4682-965a-0635489f6645",
+        "puntuacion": 5,
+        "comentario": "Local muy limpio y ambiente agradable.",
+        "fecha": "2025-01-06T01:30:00",
+        "visible": true
+    },
+    "REV8264": {
+        "id_reseña": "REV8264",
+        "id_cita": "L2",
+        "id_cliente": "6d7e8f9a-0b1c-4234-9abc-def012345678",
+        "id_barbero": "95088210-9988-4682-965a-0635489f6645",
+        "puntuacion": 5,
+        "comentario": "Local muy limpio y ambiente agradable.",
+        "fecha": "2025-01-28T18:30:00",
+        "visible": true
+    },
+    "REV9861": {
+        "id_reseña": "REV9861",
+        "id_cita": "G1",
+        "id_cliente": "0f1a2b3c-d4e5-4678-def0-123456789abc",
+        "id_barbero": "1a2b3c4d-5e6f-4789-0abc-def012345678",
+        "puntuacion": 5,
+        "comentario": "Excelente servicio, muy profesional.",
+        "fecha": "2025-01-30T09:30:00",
+        "visible": true
+    },
+    "REV2113": {
+        "id_reseña": "REV2113",
+        "id_cita": "I1",
+        "id_cliente": "4b5c6d7e-f89a-4012-0123-456789abcdef",
+        "id_barbero": "95088210-9988-4682-965a-0635489f6645",
+        "puntuacion": 4,
+        "comentario": "Muy puntual y detallista.",
+        "fecha": "2025-01-14T10:00:00",
+        "visible": true
+    }
+}

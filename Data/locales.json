@@ -1,0 +1,58 @@
+{
+    "AAA88": {
+        "id_local": "AAA88",
+        "nombre": "Barbería Central - Madrid",
+        "direccion": "Calle de Atocha 120",
+        "ciudad": "Madrid",
+        "provincia": "Madrid",
+        "codigo_postal": 28045,
+        "telefono": "+34 910 111 222",
+        "capacidad_barberos": 5,
+        "servicios_disponibles": [
+            "Corte de pelo Degradado",
+            "Arreglo de Barba",
+            "Corte + Barba",
+            "Lavado y Peinado"
+        ],
+        "horario_apertura": "09:00",
+        "horario_cierre": "20:30",
+        "activo": true
+    },
+    "BBB22": {
+        "id_local": "BBB22",
+        "nombre": "Elite Cut - Nuevo Baztán",
+        "direccion": "Avenida de la Haya 5",
+        "ciudad": "Nuevo Baztán",
+        "provincia": "Madrid",
+        "codigo_postal": 28512,
+        "telefono": "+34 918 333 444",
+        "capacidad_barberos": 3,
+        "servicios_disponibles": [
+            "Corte de pelo Degradado",
+            "Arreglo de Barba",
+            "Tinte",
+            "Corte + Barba"
+        ],
+        "horario_apertura": "10:00",
+        "horario_cierre": "21:00",
+        "activo": true
+    },
+    "CCC33": {
+        "id_local": "CCC33",
+        "nombre": "The Barber Shop - Villar del Olmo",
+        "direccion": "Plaza Mayor 4",
+        "ciudad": "Villar del Olmo",
+        "provincia": "Madrid",
+        "codigo_postal": 28514,
+        "telefono": "+34 918 555 666",
+        "capacidad_barberos": 2,
+        "servicios_disponibles": [
+            "Corte de pelo Degradado",
+            "Arreglo de Barba",
+            "Lavado y Peinado"
+        ],
+        "horario_apertura": "09:30",
+        "horario_cierre": "16:30",
+        "activo": true
+    }
+}

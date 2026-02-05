@@ -1,0 +1,29 @@
+{
+    "informacion_basica": {
+        "nombre_empresa": "Barbería Gold & Cut S.L.",
+        "cif": "B-87654321",
+        "slogan": "Tu estilo, nuestra pasión",
+        "fundacion": "2020"
+    },
+    "contacto_central": {
+        "direccion_fiscal": "Paseo de la Castellana 100, Madrid",
+        "email_soporte": "admin@goldandcut.com",
+        "telefono_central": "+34 912 345 678",
+        "web": "www.goldandcut.com"
+    },
+    "parametros_sistema": {
+        "moneda": "EUR",
+        "iva_defecto": 21,
+        "tiempo_corte_promedio_min": 30,
+        "margen_citas_min": 15
+    },
+    "redes_sociales": {
+        "instagram": "@goldandcut_oficial",
+        "tiktok": "@goldandcut_barbers",
+        "facebook": "/GoldAndCutMadrid"
+    },
+    "politicas": {
+        "cancelacion_horas_antelacion": 24,
+        "mensaje_bienvenida": "¡Bienvenido a Gold & Cut! Gracias por confiar en nosotros."
+    }
+}

@@ -2,6 +2,17 @@
 from funciones.general.crud_generico import JsonBasicCRUD
 from funciones.sesion.hash_manager import HashManager
 
+def agregar_usuarios():
+    print("Función para agregar varios usuarios")
+    new_users=JsonBasicCRUD("Data/usuarios_nuevos.json").read_all()
+    for user_id, user_data in new_users.items():
+        contraseña = user_data.get("contraseña")
+        contraseña_hasheada = HashManager.crear_hash(contraseña)
+        user_data["contraseña"] = contraseña_hasheada
+        
+        JsonBasicCRUD("Data/index_correo.json").create(user_data.get("correo"), {"contraseña": contraseña_hasheada,"user_id": user_id})
+        
+        JsonBasicCRUD("Data/usuarios.json").create(user_id, user_data)
 
 def agregar_admin():
     print("Función para agregar un nuevo administrador")

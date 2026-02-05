@@ -2,5 +2,81 @@
     "fabianlv1920@gmail.com": {
         "contraseña": "$2b$12$ub.R3R0rI1qJjTg40suIL.j5xf5zp5ao9ULJGSt.X/ExjU3Rlq7xe",
         "user_id": "95088210-9988-4682-965a-0635489f6645"
+    },
+    "isabel.castillo@example.com": {
+        "contraseña": "$2b$12$EFvbQ.8kBLJsvczOQmW6Ye7KX4aF6h6OAnsOTRAdIGrOREugYxVKa",
+        "user_id": "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+    },
+    "c.mendoza@example.com": {
+        "contraseña": "$2b$12$oXH9FrqpyBZvnrkY1JXwqOaqlCV1nusmeODjB0oZUJBq3sK1PWyKS",
+        "user_id": "7b58c894-6d9b-4497-874e-6e8d26c4892c"
+    },
+    "ana.gp@example.com": {
+        "contraseña": "$2b$12$BQBNx63sgBegJySy/QVlku.x80M0hGlLDasQT.I9TlJW7NojJ3wSW",
+        "user_id": "d8e7c6b5-a4f3-4e2d-1c0b-9a8f7e6d5c4b"
+    },
+    "roberto.g@example.com": {
+        "contraseña": "$2b$12$ZCOzMmplVIkelJeBjszZT.kIhca2IBDW.MOX9q3CiNCZ83enNduCy",
+        "user_id": "1a2b3c4d-5e6f-4789-0abc-def012345678"
+    },
+    "lucia.f@example.com": {
+        "contraseña": "$2b$12$HRHPDCWYW16hziE2E02qIOcPrA3d80Bj6ZDE6natgIkzgGpoVMdyC",
+        "user_id": "8b9c0d1e-2f3a-4456-1234-56789abcdef0"
+    },
+    "mateo.v@example.com": {
+        "contraseña": "$2b$12$J/uhbJtGdAjx80MiF/1GeusRnCoPNy4.lIQyBVnYeHa9UdbJ2cSp2",
+        "user_id": "c9b8a7f6-e5d4-43c2-b1a0-9f8e7d6c5b4a"
+    },
+    "elena.t@example.com": {
+        "contraseña": "$2b$12$eM0D5htpioqKWzSxAgzbn.m.WoCS5R5QAWLqQWC1FLynw9b9pNjb2",
+        "user_id": "a1b2c3d4-e5f6-4789-8765-43210fedcba9"
+    },
+    "j.rios@example.com": {
+        "contraseña": "$2b$12$s1SJ5kBTgryFoTpehP2oHujvEN0uKbTd1uKJTI4Q/AuJwqgXeraZS",
+        "user_id": "f1e2d3c4-b5a6-4987-8765-43210fedcba9"
+    },
+    "marta.s@example.com": {
+        "contraseña": "$2b$12$iL.1XcoHZeeeQHkrd/Fwz.rtbbV7WpXVs41MdUHa0QA.SO0YlHgIi",
+        "user_id": "2b3c4d5e-6f7a-4890-bcde-f0123456789a"
+    },
+    "diego.l@example.com": {
+        "contraseña": "$2b$12$D54XuZcAfkdDZKnqPS.twuyjby76yw1hkQuRfTudMaQMd6hbq2HK6",
+        "user_id": "5e6f7a8b-9c0d-4123-ef01-23456789abcd"
+    },
+    "sofia.r@example.com": {
+        "contraseña": "$2b$12$P387V3dOfN5550m3n.6kfuNnYt1Ad6idIQ6HJAOuuFa85yFMGN0W.",
+        "user_id": "7a8b9c0d-1e2f-4345-0123-456789abcdef"
+    },
+    "a.castro@example.com": {
+        "contraseña": "$2b$12$P0IWotwvBtBw0bOg6N6/eOCuHqHQB4A3XJpCw8Vl3/Rfb/RfX8FGW",
+        "user_id": "0d1e2f3a-4b5c-4678-3456-789abcdef012"
+    },
+    "paola.o@example.com": {
+        "contraseña": "$2b$12$emDbMwztz.2NXB2dtL/nN.nTgEWY2AWWAMK67FRrTTclHv8QOqI1K",
+        "user_id": "2f3a4b5c-6d7e-4890-5678-9abcdef01234"
+    },
+    "r.henao@example.com": {
+        "contraseña": "$2b$12$R2/PpIPeF/DFUzglpPCD3ur2Tvlk8SBQS6YtxzABK6yTtvpJOUvCu",
+        "user_id": "4b5c6d7e-8f9a-4012-789a-bcdef0123456"
+    },
+    "laura.v@example.com": {
+        "contraseña": "$2b$12$1/6dFvsUtbEVaJ0OrEi1Q.n1XQBueANEsNjYfi7wRoNc17vuq4VG2",
+        "user_id": "6d7e8f9a-0b1c-4234-9abc-def012345678"
+    },
+    "e.rojas@example.com": {
+        "contraseña": "$2b$12$l7Yzm4uGnONjLqTSAu402OhibmRBBp8M4oxE7xHFF7E3NjoOLQiKW",
+        "user_id": "8e9f0a1b-c2d3-4456-bcde-f0123456789a"
+    },
+    "g.medina@example.com": {
+        "contraseña": "$2b$12$W1WCbhBFgdLXMPfR6q5QU.8kFvsPwdq2MY3khUSzsz3ULvJ6PVYja",
+        "user_id": "0f1a2b3c-d4e5-4678-def0-123456789abc"
+    },
+    "h.perez@example.com": {
+        "contraseña": "$2b$12$185IoDF78H0OQekmtutuT.KmjAzkj4gZwsYbVxa29A0irERe3JcZK",
+        "user_id": "2a3b4c5d-e6f7-4890-f012-3456789abcde"
+    },
+    "i.montoya@example.com": {
+        "contraseña": "$2b$12$hkHC.48HCXAdnBbrBFigNeNJWEznd8O/TkVAju1LDls1Q5tV8hSd2",
+        "user_id": "4b5c6d7e-f89a-4012-0123-456789abcdef"
     }
 }
