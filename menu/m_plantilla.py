@@ -1,23 +1,28 @@
+import inquirer
+from funciones.general.colores import Colores
 
-def verificar_opcion(eleccion, tamaño):
-    if eleccion.isdigit():
-        eleccion = int(eleccion)
-        return 1 <= eleccion <= tamaño
-    return False
+from funciones.general.return_art import texto_a_ascii
+from funciones.general.utils import limpiar_consola
 
+def menu_plantilla(opciones:list, titulo):
+    preguntas = [
+        inquirer.List(
+            'eleccion',
+            message="",
+            choices=[o["descripcion"] for o in opciones]
+        )
+    ]
+    texto_a_ascii(titulo)
+    respuesta = inquirer.prompt(preguntas)
+    if respuesta is None:
+        return False
+
+    # Buscar el índice de la opción elegida
+    idx = [o["descripcion"] for o in opciones].index(respuesta['eleccion'])
+    funcion = opciones[idx]["funcion"]
     
-def menu_plantilla(opciones:list,titulo):
-    
-    print(titulo)
-    for i,e in enumerate(opciones):
-        print(f"{i+1}. {e['descripcion']}")
-    eleccion = int(input("Seleccione una opción (1-{}): ".format(len(opciones))))
-    while True:
-        if not verificar_opcion(eleccion, len(opciones)):
-            print("Opción no válida. Por favor, intente de nuevo.")
-            eleccion = int(input("Seleccione una opción (1-{}): ".format(len(opciones))))
-        else:
-            break
-    opciones[eleccion - 1]['funcion']()
-
-   
+    if funcion is not None:
+        funcion()
+        return True
+    else:
+        return False

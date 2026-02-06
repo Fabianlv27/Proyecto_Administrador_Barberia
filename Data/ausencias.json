@@ -1,0 +1,56 @@
+{
+    "AUS-001": {
+        "id_ausencia": "AUS-001",
+        "id_empleado": "1a2b3c4d-5e6f-4789-0abc-def012345678",
+        "tipo": "Vacaciones",
+        "fecha_inicio": "2025-02-10",
+        "fecha_fin": "2025-02-15",
+        "aprobada": true,
+        "comentario": "Vacaciones de invierno acumuladas."
+    },
+    "AUS-002": {
+        "id_ausencia": "AUS-002",
+        "id_empleado": "3c4d5e6f-7a8b-4901-cdef-0123456789ab",
+        "tipo": "Asuntos Propios",
+        "fecha_inicio": "2025-02-20",
+        "fecha_fin": "2025-02-20",
+        "aprobada": true,
+        "comentario": "Trámite médico por la mañana."
+    },
+    "AUS-003": {
+        "id_ausencia": "AUS-003",
+        "id_empleado": "5e6f7a8b-901c-4234-def0-123456789abc",
+        "tipo": "Enfermedad",
+        "fecha_inicio": "2025-01-15",
+        "fecha_fin": "2025-01-18",
+        "aprobada": true,
+        "comentario": "Baja por gripe (justificante entregado)."
+    },
+    "AUS-004": {
+        "id_ausencia": "AUS-004",
+        "id_empleado": "7a8b901c-2345-4678-9012-3456789abcde",
+        "tipo": "Vacaciones",
+        "fecha_inicio": "2025-03-01",
+        "fecha_fin": "2025-03-07",
+        "aprobada": false,
+        "comentario": "Pendiente de revisar cuadrante con el local BBB22."
+    },
+    "AUS-005": {
+        "id_ausencia": "AUS-005",
+        "id_empleado": "95088210-9988-4682-965a-0635489f6645",
+        "tipo": "Formación",
+        "fecha_inicio": "2025-02-25",
+        "fecha_fin": "2025-02-26",
+        "aprobada": true,
+        "comentario": "Curso intensivo de nuevas técnicas de degradado."
+    },
+    "ba0c2258-4886-4850-b5c8-7adc4b31dae2": {
+        "id_ausencia": "ba0c2258-4886-4850-b5c8-7adc4b31dae2",
+        "id_empleado": "95088210-9988-4682-965a-0635489f6645",
+        "tipo": "Enfermedad",
+        "fecha_inicio": "2026-02-05",
+        "fecha_fin": "2026-02-07",
+        "aprobada": false,
+        "comentario": "Me duele la cabeza"
+    }
+}
