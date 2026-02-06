@@ -15,5 +15,9 @@ def manejo_opciones(persona):
                 ]
     #Por si en un futuro se agregan más roles el admin general tambien puede ser empleado o admin local
     opciones.extend(manejo_roles(persona.get("rol", [])))
-    
     return opciones
+
+def menu_admin_local(persona):
+    print(f"Bienvenido al menú de administrador local, {persona.get('nombre')}!")
+    menu_plantilla(manejo_opciones(persona), "Menú Administrador Local")
+    return None
