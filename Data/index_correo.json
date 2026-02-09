@@ -78,5 +78,21 @@
     "i.montoya@example.com": {
         "contraseña": "$2b$12$hkHC.48HCXAdnBbrBFigNeNJWEznd8O/TkVAju1LDls1Q5tV8hSd2",
         "user_id": "4b5c6d7e-f89a-4012-0123-456789abcdef"
+    },
+    "Edi@gmail.com": {
+        "contraseña": "$2b$12$cicPFlSFDCfD3DAN4/q7FeeO3CoFXKVcopLwJTbTQyBj7e3Xdoxiy",
+        "user_id": "863f26d7-c66d-42a1-a237-161cd0eebe4a"
+    },
+    "Saul@gmail.com": {
+        "contraseña": "$2b$12$P7m9TPfHuSbRzDChDi4Gs.vTowKjqCWw6HMG6q5F2hGph.wtElm8C",
+        "user_id": "4f1b92ec-56f2-4d6d-8f19-382149707b89"
+    },
+    "Mati@gmail.com": {
+        "contraseña": "$2b$12$/4Eg7J63eQXpz4zpVWo98OFLxPdkpVQL.LfPcF0H0TTS1ZHvfn.Jm",
+        "user_id": "f738b0f6-0921-4ba6-a52b-4d837289302b"
+    },
+    "Axel@gmail.com": {
+        "contraseña": "$2b$12$TrzayvXNO66rj8kDogF5seQofovCyn6U.jsgQHMusiAU3PwYfYxsK",
+        "user_id": "56946c77-8a85-4049-9884-49a9c38a04d7"
     }
 }

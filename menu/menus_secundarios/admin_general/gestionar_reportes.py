@@ -1,4 +1,6 @@
+from funciones.general.colores import Colores
 from funciones.general.crud_generico import JsonBasicCRUD
+from funciones.general.return_art import texto_a_ascii
 from funciones.general.utils import limpiar_pantalla, pausar
 
 class GestorReportes:
@@ -8,7 +10,8 @@ class GestorReportes:
         self.db_locales = JsonBasicCRUD("Data/locales.json")
 
     def ver_dashboard(self, local_id_filtro=None):
-        limpiar_pantalla()
+       # texto_a_ascii("Dashboard",Colores.VERDE)
+       
         
         # Carga
         citas = self.db_citas.read_all()

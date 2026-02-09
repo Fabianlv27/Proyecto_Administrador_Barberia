@@ -1,2 +1,4 @@
-passlib[bycrypt]
+bcrypt==4.0.1
 inquirer
+pydantic[email]
+pydantic

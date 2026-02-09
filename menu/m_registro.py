@@ -2,7 +2,9 @@
 import re
 import uuid
 
+from funciones.general.colores import Colores
 from funciones.general.crud_generico import JsonBasicCRUD
+from funciones.general.return_art import texto_a_ascii
 from funciones.sesion.hash_manager import HashManager
 from models.schemas import Cliente
 
@@ -63,7 +65,7 @@ def preguntar_datos_registro() -> dict:
 def menu_registro():
 
     while True:
-        print("=== Registro de Nuevo Usuario ===")
+        texto_a_ascii("Registro",Colores.VERDE)
         datos = preguntar_datos_registro()
         es_valido, resultado = validar_datos(
             datos["nombre"],
@@ -74,14 +76,16 @@ def menu_registro():
         )
         if es_valido:
             user_id = str(uuid.uuid4())
-            contraseña_hasheada =HashManager.crearhash(resultado["contraseña"] )  
+            contraseña_hasheada =HashManager.crear_hash(resultado["contraseña"] )  
             
             JsonBasicCRUD("Data/index_correo.json").create(resultado["correo"], {"contraseña": contraseña_hasheada,"user_id": user_id})
             
             
             JsonBasicCRUD("Data/usuarios.json").create(user_id,Cliente(id=user_id, nombre=resultado["nombre"], apellido=resultado["apellido"], numero=resultado["numero"], correo=resultado["correo"], contraseña=contraseña_hasheada, rol=["cliente"]).dict())
             
-            print("Registro exitoso. Datos validados:")
+            JsonBasicCRUD("Data/sesion.json").create("sesion_actual", {"correo": resultado["correo"], "contraseña": contraseña_hasheada, "user_id": user_id})
+            
+            
             
             for clave, valor in resultado.items():
                 print(f"{clave.capitalize()}: {valor}")
@@ -89,5 +93,7 @@ def menu_registro():
         else:
             print(f"Error de validación: {resultado}")
         repetir = input("¿Desea intentar registrarse de nuevo? (s/n): ").strip().lower()
-        if repetir != 's':
+        while repetir not in ['s', 'n']:
+            repetir = input("Por favor ingrese 's' para sí o 'n' para no: ").strip().lower()
+        if repetir == 'n':
             return False

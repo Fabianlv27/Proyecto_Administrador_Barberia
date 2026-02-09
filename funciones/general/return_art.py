@@ -1,3 +1,5 @@
+import shutil
+import time
 import unicodedata
 
 from funciones.general.colores import Colores
@@ -223,4 +225,25 @@ def texto_a_ascii(texto,color=Colores.CIAN):
     final= "\n".join(lineas)
     print(final)
     print(Colores.RESET)
+
+def texto_a_ascii_animado(texto, delay=0.1):
+    texto = limpiar_texto(texto)
+    lineas = [""] * 5
+    ancho_terminal = shutil.get_terminal_size().columns
     
+    for letra in texto:
+        if letra not in ASCII_FONT:
+            raise ValueError(f"Caracter no soportado: {letra}")
+
+        for i in range(5):
+            lineas[i] += ASCII_FONT[letra][i] + "  "
+
+        # limpiar pantalla
+        print("\033c", end="")
+        print(("\n")*5)
+        # imprimir centrado
+        for linea in lineas:
+            print(linea.center(ancho_terminal))
+
+        time.sleep(delay)
+    time.sleep(1)  # pausa final para que se vea el mensaje completo

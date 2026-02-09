@@ -1,4 +1,6 @@
 from pydantic import ValidationError
+from funciones.general.colores import Colores
+from funciones.general.return_art import texto_a_ascii
 from models.local import Local  
 from funciones.general.crud_generico import JsonBasicCRUD
 from funciones.general.utils import input_no_vacio, limpiar_pantalla, pausar
@@ -95,6 +97,7 @@ class GestorLocales:
         pausar()
 
     def menu_gestion(self):
+        
         opciones = [
             {"descripcion": "Ver Lista General", "funcion": self.listar},
             {"descripcion": "Inaugurar Nuevo Local", "funcion": self.crear},

@@ -1,5 +1,7 @@
 import re
+from funciones.general.colores import Colores
 from funciones.general.crud_generico import JsonBasicCRUD
+from funciones.general.return_art import texto_a_ascii
 from funciones.sesion.hash_manager import HashManager
 from funciones.sesion.sesion import set_sesion,set_new_sesion
 
@@ -31,7 +33,7 @@ def set_complete_sesion(user_id):
 def menu_login():
     exito=False
     while True:
-        print("=== Inicio de Sesión ===")
+        texto_a_ascii("Login",Colores.VERDE)
         correo, contraseña = pedir_datos_login()
         es_valido, mensaje_error = validar_datos(correo, contraseña)
         if es_valido:

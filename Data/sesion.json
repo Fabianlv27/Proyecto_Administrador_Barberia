@@ -1,26 +1,7 @@
 {
     "sesion_actual": {
-        "correo": "fabianlv1920@gmail.com",
-        "contraseña": "$2b$12$.gqfCHuOGdJHcuM9IaR2TO.dVdIpfHSYFjyFSP1/BvtV74n4wBn5e",
-        "user_id": "95088210-9988-4682-965a-0635489f6645",
-        "nombre": "Fabian",
-        "apellido": "Luna Vicente",
-        "numero": "123456789",
-        "rol": [
-            "admin_general",
-            "admin_local",
-            "empleado",
-            "barbero"
-        ],
-        "DNI": "00000000A",
-        "estado": "Trabajando",
-        "local": "BBB22",
-        "sueldo": 6000,
-        "Ciudad": "Madrid",
-        "Provincia": "Madrid",
-        "codigo_postal": 28001,
-        "direccion": "Sede Central 1",
-        "dia_inicio": "2023-01-01",
-        "informacion_adicional": "Fundador"
+        "correo": "Axel@gmail.com",
+        "contraseña": "$2b$12$TrzayvXNO66rj8kDogF5seQofovCyn6U.jsgQHMusiAU3PwYfYxsK",
+        "user_id": "56946c77-8a85-4049-9884-49a9c38a04d7"
     }
 }

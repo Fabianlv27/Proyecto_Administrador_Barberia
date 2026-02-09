@@ -25,6 +25,6 @@ def menu_cliente():
     while True:
         persona=get_sesion()
         print(f"Bienvenido al menú de cliente, {persona.get('nombre')}!")
-        continuar=menu_plantilla(manejo_opciones(persona), "Menu Cliente")
+        continuar=menu_plantilla(manejo_opciones(), "Menu Cliente")
         if not continuar:
             return

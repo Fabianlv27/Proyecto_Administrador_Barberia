@@ -123,6 +123,7 @@ class GestorEmpleados:
         pausar()
 
     def menu_gestion(self):
+        
         opciones = [
             {"descripcion": "Ver Plantilla Completa", "funcion": self.listar},
             {"descripcion": "Contratar Nuevo Empleado", "funcion": self.contratar},
