@@ -50,7 +50,7 @@ class GestorPerfil:
         # --- PINTAR EL CUADRO ---
         print(f"╔{borde_h}╗")
         # Centramos el título principal restando los bordes
-        print(f"{borde_v}{'👤MI PERFIL DE USUARIO'.center(ancho_total-2)}{borde_v}")
+        print(f"{borde_v}{'👤MI PERFIL DE USUARIO'.center(ancho_total-3)}{borde_v}")
         print(f"╠{borde_h}╣")
         
         # SECCIÓN 1: DATOS PERSONALES

@@ -9,7 +9,7 @@ class GestorReportesBarbero:
 
     def ver_mis_estadisticas(self):
         limpiar_pantalla()
-        mi_id = get_sesion().get("id")
+        mi_id = get_sesion().get("user_id")
         
         citas = self.db_citas.read_all()
         reseñas = self.db_reseñas.read_all()

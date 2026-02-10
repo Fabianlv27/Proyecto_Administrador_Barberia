@@ -10,7 +10,7 @@ class GestorCitasBarbero:
         self.db_usuarios = JsonBasicCRUD("Data/usuarios.json") # Para ver nombres de clientes
 
     def _get_mi_id(self):
-        return get_sesion().get("id")
+        return get_sesion().get("user_id")
 
     def ver_agenda(self):
         limpiar_pantalla()
@@ -27,8 +27,8 @@ class GestorCitasBarbero:
         # Ordenamos por fecha (string ISO permite ordenar alfabéticamente)
         mis_citas.sort(key=lambda x: x.get("fecha_hora", ""))
 
-        print(f"{'ID':<6} | {'FECHA/HORA':<16} | {'CLIENTE':<20} | {'SERVICIO':<20} | {'ESTADO'}")
-        print("-" * 85)
+        print(f"{'ID':<36} | {'FECHA/HORA':<16} | {'CLIENTE':<20} | {'SERVICIO':<20} | {'ESTADO'}")
+        print("-" * 115)
         
         encontradas = False
         for c in mis_citas:
@@ -39,7 +39,7 @@ class GestorCitasBarbero:
             # Formato fecha simple
             fecha_corta = c.get("fecha_hora", "")[:16].replace("T", " ")
             
-            print(f"{c.get('id_cita'):<6} | {fecha_corta:<16} | {nombre_cliente[:20]:<20} | {c.get('servicio')[:20]:<20} | {c.get('estado')}")
+            print(f"{c.get('id_cita'):<36} | {fecha_corta:<16} | {nombre_cliente[:20]:<20} | {c.get('servicio')[:20]:<20} | {c.get('estado')}")
             encontradas = True
             
         if not encontradas: print("No tienes citas asignadas.")
@@ -62,7 +62,7 @@ class GestorCitasBarbero:
 
         print(f"\nGestionando cita con cliente...")
         print("1. Marcar como COMPLETADA ✅")
-        print("2. Marcar como CANCELADA ❌")
+        print("2. Marcar como CANCELADA  ❌")
         print("3. Añadir Nota/Comentario 📝")
         print("0. Volver")
         
@@ -71,6 +71,10 @@ class GestorCitasBarbero:
         
         if opc == "1":
             updates["estado"] = "Completada"
+            self.db_usuarios.update(cita.get("id_barbero"),{"total_generado":cita.get("precio",0) + self.db_usuarios.read(cita.get("id_barbero")).get("total_generado",0),"n_citas":self.db_usuarios.read(cita.get("id_barbero")).get("n_citas",0) + 1})
+            
+            self.db_usuarios.update(cita.get("id_cliente"),{"n_citas":self.db_usuarios.read(cita.get("id_cliente")).get("n_citas",0) + 1,"total_gastado":cita.get("precio",0) + self.db_usuarios.read(cita.get("id_cliente")).get("total_gastado",0)})
+            
             print("✅ Cita finalizada.")
         elif opc == "2":
             updates["estado"] = "Cancelada"

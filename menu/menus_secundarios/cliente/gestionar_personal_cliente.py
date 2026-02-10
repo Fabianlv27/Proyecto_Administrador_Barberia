@@ -7,7 +7,7 @@ class GestorPersonalCliente:
         self.db_citas = JsonBasicCRUD("Data/citas.json")
 
     def _get_mi_id(self):
-        return get_sesion().get("id")
+        return get_sesion().get("user_id")
 
     def ver_estadisticas(self):
         limpiar_pantalla()

@@ -15,9 +15,9 @@ def validar_datos(correo, contraseña):
 def password_validator(correo, contraseña):
     user_data = JsonBasicCRUD("Data/index_correo.json").read(correo)
     if user_data is None:
-        return False, "Correo no encontrado"
+        return False,None, "Correo no encontrado"
     if not HashManager.verificar_hash(contraseña, user_data.get("contraseña")):
-        return False, "Contraseña incorrecta"
+        return False,None, "Contraseña incorrecta"
     return True,user_data.get("user_id"), "Contraseña válida"
 
 def pedir_datos_login():

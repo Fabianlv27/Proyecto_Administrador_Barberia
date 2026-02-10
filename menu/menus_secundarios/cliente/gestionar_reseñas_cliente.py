@@ -9,7 +9,7 @@ class GestorResenasCliente:
         self.db_citas = JsonBasicCRUD("Data/citas.json")
 
     def _get_mi_id(self):
-        return get_sesion().get("id")
+        return get_sesion().get("user_id")
 
     def escribir_reseña(self):
         limpiar_pantalla()

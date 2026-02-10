@@ -322,5 +322,41 @@
         "precio": 8.0,
         "estado": "Pendiente",
         "notas_barbero": null
+    },
+    "9941d071-bbe2-4563-9a08-f21008c26f8b": {
+        "id_cita": "9941d071-bbe2-4563-9a08-f21008c26f8b",
+        "id_cliente": "56946c77-8a85-4049-9884-49a9c38a04d7",
+        "id_barbero": "95088210-9988-4682-965a-0635489f6645",
+        "id_local": "BBB22",
+        "fecha_hora": "2026",
+        "servicio": "Corte",
+        "duracion_minutos": 30,
+        "precio": 15.0,
+        "estado": "Completada",
+        "notas_barbero": null
+    },
+    "1575dcc6-4cb8-491f-a42a-40a383d1f7f6": {
+        "id_cita": "1575dcc6-4cb8-491f-a42a-40a383d1f7f6",
+        "id_cliente": "56946c77-8a85-4049-9884-49a9c38a04d7",
+        "id_barbero": "1a2b3c4d-5e6f-4789-0abc-def012345678",
+        "id_local": "AAA88",
+        "fecha_hora": "2026-02-11T10:00:00",
+        "servicio": "Corte de Cabello",
+        "duracion_minutos": 30,
+        "precio": 15.0,
+        "estado": "Pendiente",
+        "notas_barbero": null
+    },
+    "d17e303f-7ccf-4f7d-b00e-412615f7b5c3": {
+        "id_cita": "d17e303f-7ccf-4f7d-b00e-412615f7b5c3",
+        "id_cliente": "56946c77-8a85-4049-9884-49a9c38a04d7",
+        "id_barbero": "1a2b3c4d-5e6f-4789-0abc-def012345678",
+        "id_local": "AAA88",
+        "fecha_hora": "2026-02-12T11:30:00",
+        "servicio": "Corte de Cabello",
+        "duracion_minutos": 30,
+        "precio": 15.0,
+        "estado": "Pendiente",
+        "notas_barbero": null
     }
 }

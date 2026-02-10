@@ -60,7 +60,7 @@ def menu_with_login():
         
         opciones.extend(manejo_roles(persona.get("rol", [])))
         
-        opciones.extend([{"descripcion": "(<-) Cerrar sesión",  "funcion":accion_logout},{"descripcion": "Salir", "funcion":     None}])  
+        opciones.extend([{"descripcion": "Cerrar sesión",  "funcion":accion_logout},{"descripcion": "(<-) Salir", "funcion":     None}])  
         continuar= menu_plantilla(opciones, "Menú Principal")
         if not continuar:
             return

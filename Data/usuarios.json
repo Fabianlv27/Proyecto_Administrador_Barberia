@@ -20,7 +20,8 @@
         "codigo_postal": 28001,
         "direccion": "Sede Central 1",
         "dia_inicio": "2023-01-01",
-        "informacion_adicional": "Fundador"
+        "informacion_adicional": "Fundador",
+        "total_generado": 15.0
     },
     "f47ac10b-58cc-4372-a567-0e02b2c3d479": {
         "nombre": "Isabel",
@@ -138,7 +139,7 @@
             "SAP67",
             "DFH82"
         ],
-        "experiecia": "2 años",
+        "expriencia": "2 años",
         "reseñas": [
             "AAA33",
             "EE455"
@@ -280,7 +281,7 @@
         "estado": "Trabajando",
         "sueldo": 1400,
         "total_generado": 5000,
-        "experiecia": "5 años"
+        "expriencia": "5 años"
     },
     "2f3a4b5c-6d7e-4890-5678-9abcdef01234": {
         "nombre": "Paola",
@@ -446,7 +447,7 @@
         "informacion_adicional": null
     },
     "56946c77-8a85-4049-9884-49a9c38a04d7": {
-        "n_citas": 0,
+        "n_citas": 1,
         "total_gasto": 0.0,
         "citas": [],
         "local_favorito": null,
@@ -465,6 +466,7 @@
         "Provincia": null,
         "codigo_postal": null,
         "direccion": null,
-        "informacion_adicional": null
+        "informacion_adicional": null,
+        "total_gastado": 15.0
     }
 }

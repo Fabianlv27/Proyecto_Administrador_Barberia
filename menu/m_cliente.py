@@ -10,12 +10,13 @@ ctrl_citas = GestorCitasCliente()
 ctrl_personal = GestorPersonalCliente()
 ctrl_resenas = GestorResenasCliente()
 ctrl_locales = GestorLocalesCliente()
+
 def manejo_opciones():
-    opciones = [{"descripcion": "Gestionar citas", "funcion": None},
-                {"descripcion": "Ver cupones", "funcion": None},
-                {"descripcion": "Dar reseña", "funcion": None},
-                {"descripcion": "Ver estadisticas", "funcion": None},
-                {"descripcion":"Ver locales","funcion": None},
+    opciones = [{"descripcion": "Gestionar citas", "funcion": ctrl_citas.menu_gestion},
+                {"descripcion": "Ver cupones", "funcion": ctrl_personal.ver_cupones},
+                {"descripcion": "Dar reseña", "funcion": ctrl_resenas.menu_gestion},
+                {"descripcion": "Ver estadisticas", "funcion": ctrl_personal.ver_estadisticas},
+                {"descripcion":"Ver locales","funcion": ctrl_locales.menu_gestion},
                 {"descripcion": "(<-) volver", "funcion": None}
                 ] 
     return opciones
