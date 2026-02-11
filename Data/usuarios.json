@@ -21,7 +21,8 @@
         "direccion": "Sede Central 1",
         "dia_inicio": "2023-01-01",
         "informacion_adicional": "Fundador",
-        "total_generado": 15.0
+        "total_generado": 38.0,
+        "n_citas": 2
     },
     "f47ac10b-58cc-4372-a567-0e02b2c3d479": {
         "nombre": "Isabel",
@@ -225,7 +226,7 @@
         "rol": [
             "cliente"
         ],
-        "n_citas": 5,
+        "n_citas": 6,
         "total_gasto": 110,
         "citas": [
             "K1",
@@ -233,7 +234,8 @@
             "K3",
             "K4",
             "K5"
-        ]
+        ],
+        "total_gastado": 8.0
     },
     "5e6f7a8b-9c0d-4123-ef01-23456789abcd": {
         "nombre": "Diego",
@@ -468,5 +470,50 @@
         "direccion": null,
         "informacion_adicional": null,
         "total_gastado": 15.0
+    },
+    "0df7eb5f-7562-4373-8034-9c6ba16e42f7": {
+        "n_citas": 1,
+        "total_gasto": 0.0,
+        "citas": [],
+        "local_favorito": null,
+        "barberos_favorito": [],
+        "id": "0df7eb5f-7562-4373-8034-9c6ba16e42f7",
+        "nombre": "Roy",
+        "apellido": "Rebuffo",
+        "numero": "124536852",
+        "correo": "roy@gmail.com",
+        "contraseña": "$2b$12$EqpH8zPxSjqJk8leCm2cBuQpRlOywonHEtkhlUXIJjwQ6BnNkaE4O",
+        "rol": [
+            "cliente"
+        ],
+        "DNI": null,
+        "Ciudad": null,
+        "Provincia": null,
+        "codigo_postal": null,
+        "direccion": null,
+        "informacion_adicional": null,
+        "total_gastado": 15.0
+    },
+    "09996ae8-b489-4ccb-a0c0-f1e6b79c66d9": {
+        "n_citas": 0,
+        "total_gasto": 0.0,
+        "citas": [],
+        "local_favorito": null,
+        "barberos_favorito": [],
+        "id": "09996ae8-b489-4ccb-a0c0-f1e6b79c66d9",
+        "nombre": "Yo",
+        "apellido": "El",
+        "numero": "644544258",
+        "correo": "r@gmail.com",
+        "contraseña": "$2b$12$QTVA.XVdDD5PdkbmuDcfdO8M7beTtBd0rbdPw6Y0nvhbW83pXLJGG",
+        "rol": [
+            "cliente"
+        ],
+        "DNI": null,
+        "Ciudad": null,
+        "Provincia": null,
+        "codigo_postal": null,
+        "direccion": null,
+        "informacion_adicional": null
     }
 }

@@ -12,9 +12,7 @@ class GestorPerfil:
         # --- CONFIGURACIÓN DEL DISEÑO ---
         ancho_total = 60  # Ancho total del cuadro (ajústalo si quieres más/menos)
         ancho_etiqueta = 12 # Espacio reservado para "Nombre:", "Email:", etc.
-        
-        # Calculamos el espacio útil para el texto (Ancho total - bordes - espacios internos)
-        # Borde izq(1) + espacio(1) + etiqueta + espacio(1) + valor + espacio(1) + Borde der(1)
+
         ancho_valor = ancho_total - 2 - 1 - ancho_etiqueta - 1 - 1 
 
         borde_h = "═" * (ancho_total - 2)
@@ -53,20 +51,19 @@ class GestorPerfil:
         print(f"{borde_v}{'👤MI PERFIL DE USUARIO'.center(ancho_total-3)}{borde_v}")
         print(f"╠{borde_h}╣")
         
-        # SECCIÓN 1: DATOS PERSONALES
+
         imprimir_titulo("📋 DATOS PERSONALES")
         imprimir_linea("Nombre:", nombre_completo)
         imprimir_linea("Email:", u.get('correo', ''))
         imprimir_linea("Teléfono:", u.get('numero', ''))
-        imprimir_linea("ID:", u.get('id', ''))
-        
-        # SECCIÓN 2: DATOS DE CUENTA
+        #imprimir_linea("ID:", u.get('user_id', ''))
+ 
         print(f"╠{borde_h}╣")
         imprimir_titulo("🔐 SEGURIDAD")
         imprimir_linea("Roles:", roles)
         imprimir_linea("Password:", "•" * 8)
 
-        # SECCIÓN 3: DATOS ESPECÍFICOS
+   
         if "cliente" in u.get("rol", []):
             print(f"╠{borde_h}╣")
             imprimir_titulo("❤️  FIDELIZACIÓN")
@@ -74,7 +71,7 @@ class GestorPerfil:
             imprimir_linea("Local Fav:", fav)
             imprimir_linea("Citas:", u.get('n_citas', 0))
         
-        else: # Es empleado/barbero/admin
+        else: 
             print(f"╠{borde_h}╣")
             imprimir_titulo("👔 DATOS LABORALES")
             
@@ -86,7 +83,7 @@ class GestorPerfil:
             
             imprimir_linea("Sede:", local)
             imprimir_linea("Jornada:", dias)
-            # Convertimos sueldo a string con símbolo
+  
             imprimir_linea("Salario:", f"{sueldo} €")
             imprimir_linea("Estado:", u.get('estado', 'Activo'))
 

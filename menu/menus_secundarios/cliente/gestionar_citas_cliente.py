@@ -103,6 +103,7 @@ class GestorCitasCliente:
             } 
             for lid, l in self.db_locales.read_all().items() if l.get("activo")
         ]
+        #opciones_locales.extend({"descripcion":"salir","funcion":None})
         
         # El menú devuelve el resultado de la lambda (None) o el valor seleccionado
         # Asumimos que menu_plantilla ejecuta la función. Verificamos self.local_id
@@ -282,13 +283,13 @@ class GestorCitasCliente:
         while True:
             limpiar_pantalla()
             opciones = [
-                {"descripcion": "Reservar nueva cita", "funcion": self.nueva_reserva},
+                {"descripcion": "Reservar nueva cita ($15)", "funcion": self.nueva_reserva},
                 {"descripcion": "Ver mis citas", "funcion": self.ver_mis_citas},
                 {"descripcion": "Cancelar una cita", "funcion": self.cancelar_cita},
                 {"descripcion": "Volver", "funcion": None}
             ]
             
             seleccion = menu_plantilla(opciones, "GESTIon citas")
-            if seleccion == "salir":
+            if not seleccion:
                 break
 

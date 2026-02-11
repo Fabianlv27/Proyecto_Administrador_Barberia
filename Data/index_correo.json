@@ -94,5 +94,13 @@
     "Axel@gmail.com": {
         "contraseña": "$2b$12$TrzayvXNO66rj8kDogF5seQofovCyn6U.jsgQHMusiAU3PwYfYxsK",
         "user_id": "56946c77-8a85-4049-9884-49a9c38a04d7"
+    },
+    "roy@gmail.com": {
+        "contraseña": "$2b$12$EqpH8zPxSjqJk8leCm2cBuQpRlOywonHEtkhlUXIJjwQ6BnNkaE4O",
+        "user_id": "0df7eb5f-7562-4373-8034-9c6ba16e42f7"
+    },
+    "r@gmail.com": {
+        "contraseña": "$2b$12$QTVA.XVdDD5PdkbmuDcfdO8M7beTtBd0rbdPw6Y0nvhbW83pXLJGG",
+        "user_id": "09996ae8-b489-4ccb-a0c0-f1e6b79c66d9"
     }
 }

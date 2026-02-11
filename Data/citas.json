@@ -176,7 +176,7 @@
         "servicio": "Lavado y Peinado",
         "duracion_minutos": 15,
         "precio": 8.0,
-        "estado": "Pendiente",
+        "estado": "Completada",
         "notas_barbero": null
     },
     "K4": {
@@ -357,6 +357,18 @@
         "duracion_minutos": 30,
         "precio": 15.0,
         "estado": "Pendiente",
+        "notas_barbero": null
+    },
+    "62862259-3b43-4878-aaa8-b40c6e9307f6": {
+        "id_cita": "62862259-3b43-4878-aaa8-b40c6e9307f6",
+        "id_cliente": "0df7eb5f-7562-4373-8034-9c6ba16e42f7",
+        "id_barbero": "95088210-9988-4682-965a-0635489f6645",
+        "id_local": "BBB22",
+        "fecha_hora": "2026-02-13T11:30:00",
+        "servicio": "Corte de Cabello",
+        "duracion_minutos": 30,
+        "precio": 15.0,
+        "estado": "Completada",
         "notas_barbero": null
     }
 }

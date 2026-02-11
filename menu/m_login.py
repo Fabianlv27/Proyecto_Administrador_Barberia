@@ -48,5 +48,8 @@ def menu_login():
             break
         else:
             print(f"Error en el inicio de sesión: {mensaje_error}")
+            cont=input("Continuar? (s/n)")
+            if cont !="s":
+                return False
     if exito:
         return True
